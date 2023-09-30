@@ -1209,7 +1209,7 @@ class Class1AffinityPredictor(object):
 
         peptide_has_valid_amino_acids = (
             (~df.supported_peptide) |
-            df.peptide.str.upper().str.match("^[ACDEFGHIKLMNPQRSTVWY]+$"))
+            df.peptide.str.upper().str.match("^[ACDEFGHIKLMNPQRSTVWXY]+$"))
         df["supported_peptide"] = (
                 df["supported_peptide"] & peptide_has_valid_amino_acids)
 
